@@ -95,7 +95,8 @@ public class PBEffectGenTargets extends PBEffectGenerateByStructure
                             if (nextDist >= targetSize && random.nextDouble() < entityDensity)
                             {
                                 Entity newEntity = PBEffectSpawnEntityIDList.createEntity(world, entity, random, entityToSpawn, structureTarget.x + xP + 0.5, structureTarget.y + 1.5, structureTarget.z + zP + 0.5);
-                                world.spawnEntity(newEntity);
+                                if (newEntity != null)
+                                	world.spawnEntity(newEntity);
                             }
                         }
                     }
