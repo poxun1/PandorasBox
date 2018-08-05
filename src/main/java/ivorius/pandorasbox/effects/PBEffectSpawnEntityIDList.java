@@ -97,7 +97,7 @@ public class PBEffectSpawnEntityIDList extends PBEffectSpawnEntities
                 randomizeEntity(random, pbEntity.getEntityId(), (EntityLiving) newEntity, nameEntities, equipLevel, buffLevel);
             }
 
-            if (previousEntity != null)
+            if (previousEntity != null && newEntity != null)
             {
                 world.spawnEntity(previousEntity);
                 previousEntity.startRiding(newEntity, true);
@@ -284,7 +284,7 @@ public class PBEffectSpawnEntityIDList extends PBEffectSpawnEntities
             {
                 EntityCreeper creeper = new EntityCreeper(world);
                 creeper.setLocationAndAngles(x, y, z, random.nextFloat() * 360.0f, 0.0f);
-                creeper.getDataManager().set(creeperPoweredParameter(), true);
+                creeper.onStruckByLightning(null);
                 return creeper;
             }
             else if ("pbspecial_skeletonWither".equals(entityID))
