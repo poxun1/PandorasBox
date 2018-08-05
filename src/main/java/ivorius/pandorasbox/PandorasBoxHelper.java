@@ -457,6 +457,6 @@ public class PandorasBoxHelper
             }
         }
 
-        return null;
+        return ItemStack.EMPTY;
     }
 }

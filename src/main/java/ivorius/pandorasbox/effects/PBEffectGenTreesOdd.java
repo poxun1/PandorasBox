@@ -40,7 +40,7 @@ public class PBEffectGenTreesOdd extends PBEffectGenerateByGenerator
     private void initializeGens()
     {
         treeGens = new WorldGenerator[1];
-        treeGens[treeJungle] = new WorldGenMegaJungleCustom(true, 10, 20, trunkBlock.getDefaultState().withProperty(BlockPlanks.VARIANT, BlockPlanks.EnumType.JUNGLE), leafBlock.getDefaultState().withProperty(BlockPlanks.VARIANT, BlockPlanks.EnumType.JUNGLE));
+        treeGens[treeJungle] = new WorldGenMegaJungleCustom(true, 10, 20, trunkBlock.getDefaultState(), leafBlock.getDefaultState());
     }
 
     @Override

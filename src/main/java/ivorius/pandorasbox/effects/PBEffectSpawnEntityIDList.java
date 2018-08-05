@@ -306,7 +306,11 @@ public class PBEffectSpawnEntityIDList extends PBEffectSpawnEntities
             }
 
             Entity entity = EntityList.createEntityByIDFromName(new ResourceLocation(entityID), world);
-            entity.setLocationAndAngles(x, y, z, random.nextFloat() * 360.0f, 0.0f);
+            if (entity != null)
+            {
+            	entity.setLocationAndAngles(x, y, z, random.nextFloat() * 360.0f, 0.0f);
+            }
+
 
             return entity;
         }

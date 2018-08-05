@@ -62,7 +62,7 @@ public class PBEffectEntitiesThrowItems extends PBEffectEntityBased
                                 throwItem(entity, world, stack);
                             }
 
-                            player.inventory.setInventorySlotContents(i, null);
+                            player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
                         }
                     }
                 }
